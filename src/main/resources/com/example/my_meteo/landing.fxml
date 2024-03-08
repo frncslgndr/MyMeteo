@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.my_meteo.Controller.LandingController">
+   <children>
+      <VBox layoutX="5.0" layoutY="14.0" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label style="-fx-padding: 10;" text="My Weather" textAlignment="CENTER" textFill="#0b0071">
+                     <font>
+                        <Font name="Trebuchet MS" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" style="-fx-label-padding: 10;" text="Trouvez la météo de n'importe quelle ville !" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" maxHeight="60.0" prefHeight="40.0" prefWidth="592.0" spacing="30.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="cityTextField" onKeyPressed="#updateInput" prefHeight="30.0" prefWidth="300.0" promptText="Rechercher une ville..." />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#showCityListActionEvent" onKeyPressed="#showCityListKeyEvent" prefHeight="30.0" style="-fx-background-color: darkblue; -fx-text-fill: white; -fx-padding: 5 10;" styleClass="searchButton" text="Rechercher">
+                     <font>
+                        <Font name="Gill Sans MT" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <VBox fx:id="citiesVBox" alignment="CENTER" prefHeight="140.0" prefWidth="600.0" />
+            <VBox fx:id="mapVBox" alignment="CENTER" prefHeight="300.0" prefWidth="600.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

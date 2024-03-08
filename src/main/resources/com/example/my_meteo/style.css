@@ -1,0 +1,10 @@
+#title{
+    -fx-font-size: 30px;
+}
+
+.graph{
+    -fx-background-color: #eaeaea;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+    -fx-background-radius: 10px;
+}

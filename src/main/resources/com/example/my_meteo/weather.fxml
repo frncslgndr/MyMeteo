@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="650.0" prefWidth="1150.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.my_meteo.Controller.WeatherController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+  <HBox prefHeight="100.0" prefWidth="200.0" spacing="500.0">
+      <children>
+         <HBox alignment="CENTER_LEFT" spacing="20.0">
+            <children>
+               <Button alignment="CENTER" mnemonicParsing="false" onAction="#goToSearch" style="-fx-background-color: #0b0071; -fx-text-fill: white; -fx-label-padding: 5 10 5 10;" text="Nouvelle recherche">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor></Button>
+               <Button fx:id="touitButton" alignment="CENTER" mnemonicParsing="false" onAction="#touitThis" style="-fx-background-color: #0b0071; -fx-text-fill: white; -fx-label-padding: 5 10 5 10;" text="Partager sur Touiteur" textAlignment="CENTER">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor></Button>
+            </children>
+         </HBox>
+      </children>
+   </HBox>
+  <Label fx:id="title" textFill="#0b0071">
+      <font>
+         <Font name="Trebuchet MS" size="30.0" />
+      </font></Label>
+  <Label text="Prévisions des 5 prochains jours">
+      <font>
+         <Font name="Gill Sans MT" size="20.0" />
+      </font></Label>
+  <TabPane fx:id="tabPane" prefHeight="500.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+     <tabs>
+     </tabs>
+  </TabPane>
+</VBox>
